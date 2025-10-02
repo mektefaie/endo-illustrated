@@ -106,11 +106,13 @@ const Hero = () => {
           transition={{ delay: 0.6 }}
           className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl"
         >
-          {heroIcons.map((icon, index) => (
+          {heroIcons.map(({ icon, url }, index) => (
             <a
               key={index}
-              href="#"
-              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors p-1"
             >
               {icon}
             </a>

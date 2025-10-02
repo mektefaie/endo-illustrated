@@ -24,39 +24,51 @@ import {
 
 /* eslint-disable react/jsx-key */
 export const heroIcons = [
-  <RiInstagramLine />,
-  <RiFacebookCircleLine />,
-  <RiTwitterLine />,
-  <RiGithubLine />,
+  {
+    icon: <RiInstagramLine />,
+    url: 'https://instagram.com/',
+  },
+  {
+    icon: <RiFacebookCircleLine />,
+    url: 'https://facebook.com/',
+  },
+  {
+    icon: <RiTwitterLine />,
+    url: 'https://twitter.com/',
+  },
+  {
+    icon: <RiGithubLine />,
+    url: 'https://github.com/',
+  },
 ];
 
 // About Me
 import {
   RiAwardFill,
-  RiGithubFill,
+  RiEditLine,
   RiGroupLine,
-  RiProjector2Line,
+  RiImageAiLine,
 } from '@remixicon/react';
 
 export const aboutData = [
   {
-    title: 'Github Repos',
-    amount: 348,
-    icon: <RiGithubFill />,
+    title: 'Illustrations',
+    amount: 100,
+    icon: <RiEditLine />,
   },
   {
-    title: 'Successful Projects',
-    amount: 227,
-    icon: <RiProjector2Line />,
+    title: 'Projects',
+    amount: 100,
+    icon: <RiImageAiLine />,
   },
   {
-    title: 'Satisfied clients',
-    amount: 176,
+    title: 'Clients',
+    amount: 100,
     icon: <RiGroupLine />,
   },
   {
-    title: 'Awards and Recognition',
-    amount: 107,
+    title: 'Awards & Recognitions',
+    amount: 100,
     icon: <RiAwardFill />,
   },
 ];
