@@ -59,7 +59,7 @@ const Hero = () => {
         >
           {/* Image with rotation based on mouse */}
           <motion.div
-            className="relative flex items-center justify-center"
+            className="flex items-center justify-center"
             style={{
               rotateX: mouseMove ? rotateX : 0,
               rotateY: mouseMove ? rotateY : 0,
@@ -112,7 +112,7 @@ const Hero = () => {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors p-1"
+              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
             >
               {icon}
             </a>

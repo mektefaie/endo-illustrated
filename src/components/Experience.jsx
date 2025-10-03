@@ -36,7 +36,7 @@ const Experience = () => {
   });
 
   return (
-    <div className="relative py-20 px-96">
+    <div className="relative py-20">
       <Heading text={'Experience & Education'} />
 
       <Image
@@ -44,13 +44,13 @@ const Experience = () => {
         height={400}
         width={400}
         alt={'experience Image'}
-        className="absolute -top-4 right-96 opacity-70 lg:hidden"
+        className="absolute -top-4 right-0 opacity-70 lg:hidden"
       />
 
       {/* WRAPPER: contains the timeline line + all the blocks. */}
       <div
         ref={timelineRef}
-        className="w-full height-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10 relative"
+        className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10"
       >
         {/* TIMELINE VERTICAL LINE - animated with scaleY from 0 -> 1 once */}
         <motion.div
@@ -80,19 +80,19 @@ const Experience = () => {
                 : 'left-[300px] xl:left-[240px] lg:left-0'
             }`}
           >
-            <div className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm">
-              <h1 className="text-xl sm:text-lg font-light text-gray-700">
+            <div className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm dark:bg-zinc-700 transition-colors z-20">
+              <h1 className="text-xl sm:text-lg font-light text-gray-700 dark:text-white">
                 {data.title}
               </h1>
 
-              <p className="text-gray-800">
+              <p className="text-gray-800 dark:text-gray-100">
                 <span className="block font-light">Education:</span>
                 <span className="block pl-2 font-extralight">
                   {data.education}
                 </span>
               </p>
 
-              <div className="text-gray-800">
+              <div className="text-gray-800 dark:text-gray-200 transition-colors">
                 <span className="font-light">Experience:</span>
                 <ul className="pl-2">
                   {data.experience.map((exp, idx) => (
@@ -104,7 +104,7 @@ const Experience = () => {
               </div>
 
               <span
-                className={`absolute top-20 text-red-300 -translate-y-1/2 ${
+                className={`absolute top-20 text-red-300 -translate-y-1/2 lg:hidden ${
                   index % 2 === 0 ? 'left-full rotate-180' : 'right-full'
                 }`}
               >
