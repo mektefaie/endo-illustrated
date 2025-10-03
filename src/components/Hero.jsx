@@ -59,7 +59,7 @@ const Hero = () => {
         >
           {/* Image with rotation based on mouse */}
           <motion.div
-            className="flex items-center justify-center"
+            className="relative flex items-center justify-center"
             style={{
               rotateX: mouseMove ? rotateX : 0,
               rotateY: mouseMove ? rotateY : 0,

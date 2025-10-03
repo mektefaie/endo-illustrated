@@ -1,7 +1,8 @@
 // Remix Icons package:
 // npm install @remixicon/react
 // remixicon.com/
-// Usage example:
+// Usage example for a single icon named 'heart-fill':
+
 // import { RiHeartFill } from '@remixicon/react';
 
 // const MyComponent = () => {
@@ -14,7 +15,7 @@
 //   );
 // };
 
-// Hero
+// Hero ===============================
 import {
   RiFacebookCircleLine,
   RiGithubLine,
@@ -22,7 +23,6 @@ import {
   RiTwitterLine,
 } from '@remixicon/react';
 
-/* eslint-disable react/jsx-key */
 export const heroIcons = [
   {
     icon: <RiInstagramLine />,
@@ -42,7 +42,7 @@ export const heroIcons = [
   },
 ];
 
-// About Me
+// About Me ===============================
 import {
   RiAwardFill,
   RiEditLine,
@@ -74,14 +74,14 @@ export const aboutData = [
 ];
 
 import { RiArrowLeftSFill, RiDownloadLine } from '@remixicon/react';
+
 export const downloadIcon = <RiDownloadLine />;
 export const arrowLeftIcon = <RiArrowLeftSFill />;
 
 export const aboutText =
   " Hi, I'm Nick, a web developer & designer. I blend the technical  skills of web development with the creative aspects of web design. I code in HTML, CSS, JavaScript, React, NextJS... to build functional and responsive websites, while also using design tools like Photoshop and Figma to create visually appealing and user-friendly  interfaces. My role allows me to ensure that websites not only work well but also look great and provide an excellent user experience.";
-// End of About Me
 
-// Experience
+// Experience  ===============================
 export const experienceData = [
   {
     year: 1,
@@ -97,7 +97,7 @@ export const experienceData = [
     year: 2,
     title: 'Advanced Learning and Early Experience',
     education:
-      'Associate’s Degree in Web Development or Design: Enroll in a 2-year program covering web development and design principles.',
+      "Associate's Degree in Web Development or Design: Enroll in a 2-year program covering web development and design principles.",
     experience: [
       'Freelance Work: Take on small freelance projects to build a portfolio.',
       'Online Courses and Certifications: Learn JavaScript, responsive design, and UX/UI design.',
@@ -135,7 +135,7 @@ export const experienceData = [
   },
 ];
 
-// Skills
+// Skills ===============================
 export const skillsData = [
   {
     name: 'Figma',
@@ -211,7 +211,7 @@ export const skillsData = [
   },
 ];
 
-// Reviews
+// Reviews ===============================
 import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
@@ -261,7 +261,7 @@ export const reviewsData = [
   },
 ];
 
-// Projects
+// Projects ===============================
 export const projectsData = [
   {
     name: 'SparkleGrove.com',
@@ -339,7 +339,7 @@ export const projectsButton = [
   'ThreeJS',
 ];
 
-// Pricing Plans
+// Pricing Plans ===============================
 export const pricingPlans = [
   {
     title: 'Basic',
@@ -394,7 +394,7 @@ import { RiCheckLine } from '@remixicon/react';
 
 export const checkIcon = <RiCheckLine />;
 
-// Q & A
+// Q & A ===============================
 export const questions = [
   {
     question: 'How much do you charge for a website?',
@@ -455,10 +455,12 @@ export const questions = [
 ];
 
 import { RiArrowDropDownLine } from '@remixicon/react';
+
 export const questionArrow = <RiArrowDropDownLine />;
 
-// Navbar
+// Navbar ===============================
 import { RiCopyrightLine } from '@remixicon/react';
+
 export const copyRightIcon = <RiCopyrightLine />;
 
 import {
@@ -521,7 +523,7 @@ export const navbarData = [
   },
 ];
 
-// Toggle
+// Toggle ===============================
 import { RiMoonFoggyFill, RiSunFoggyFill } from '@remixicon/react';
 
 export const sunIcon = <RiSunFoggyFill />;
