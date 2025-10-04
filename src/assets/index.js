@@ -79,60 +79,48 @@ export const downloadIcon = <RiDownloadLine />;
 export const arrowLeftIcon = <RiArrowLeftSFill />;
 
 export const aboutText =
-  " Hi, I'm Nick, a web developer & designer. I blend the technical  skills of web development with the creative aspects of web design. I code in HTML, CSS, JavaScript, React, NextJS... to build functional and responsive websites, while also using design tools like Photoshop and Figma to create visually appealing and user-friendly  interfaces. My role allows me to ensure that websites not only work well but also look great and provide an excellent user experience.";
+  " Hi, I'm Mahmoud, a web developer & designer. I blend the technical  skills of web development with the creative aspects of web design. I code in HTML, CSS, JavaScript, React, NextJS... to build functional and responsive websites, while also using design tools like Adobe Photoshop, Illustrator and Procreate to create visually appealing and user-friendly  interfaces. My role allows me to ensure that websites not only work well but also look great and provide an excellent user experience.";
 
 // Experience  ===============================
 export const experienceData = [
   {
-    year: 1,
+    year: 2003,
     title: 'Foundation and Basics',
-    education:
-      'High School Diploma: Focus on computer science, mathematics, and art/design courses.',
+    education: 'Doctor of Dental Medicine (DMD)',
     experience: [
-      'Basic HTML/CSS: Learn through online tutorials and courses.',
-      'Personal Projects: Create simple personal websites or blogs.',
+      'Human anatomy: learning through medical curriculum.',
+      'Human physiology: Create simple personal websites or blogs.',
     ],
   },
   {
-    year: 2,
+    year: 2026,
     title: 'Advanced Learning and Early Experience',
-    education:
-      "Associate's Degree in Web Development or Design: Enroll in a 2-year program covering web development and design principles.",
+    education: 'Biomedical Visualization and Communication (Certificate)',
     experience: [
-      'Freelance Work: Take on small freelance projects to build a portfolio.',
-      'Online Courses and Certifications: Learn JavaScript, responsive design, and UX/UI design.',
+      'Online Courses and Certifications: UBC Extended Learning.',
+      'Projects: personal and group projects.',
     ],
   },
-  {
-    year: 3,
-    title: 'Specialized Education and Real-World Application',
-    education:
-      'Online Courses and Bootcamps: Focus on specialized areas like front-end frameworks (React, Angular) and back-end technologies (Node.js).',
-    experience: [
-      'Internships: Secure internships with tech companies or design agencies.',
-      'Contribute to Open Source: Collaborate on open-source projects.',
-    ],
-  },
-  {
-    year: 4,
-    title: 'Building Expertise and Expanding Skills',
-    education:
-      'Certifications: Obtain certifications in advanced web technologies.',
-    experience: [
-      'Full-Time Position: Work as a junior web developer or designer.',
-      'Portfolio Development: Continuously update your portfolio with professional and personal projects.',
-    ],
-  },
-  {
-    year: 5,
-    title: 'Mastery and Leadership',
-    education:
-      'Workshops and Conferences: Attend industry events to stay updated.',
-    experience: [
-      'Senior Position: Aim for a senior web developer or lead designer role, mentoring junior colleagues.',
-      'Freelance and Consulting: Consider starting a freelance business or consulting practice.',
-    ],
-  },
+  // {
+  //   year: 2021,
+  //   title: 'Specialized Education and Real-World Application',
+  //   education:
+  //     'Online Courses and Bootcamps: Focus on specialized areas like front-end frameworks (React, Angular) and back-end technologies (Node.js).',
+  //   experience: [
+  //     'Internships: Secure internships with tech companies or design agencies.',
+  //     'Contribute to Open Source: Collaborate on open-source projects.',
+  //   ],
+  // },
+  // {
+  //   year: 2023,
+  //   title: 'Building Expertise and Expanding Skills',
+  //   education:
+  //     'Certifications: Obtain certifications in advanced web technologies.',
+  //   experience: [
+  //     'Full-Time Position: Work as a junior web developer or designer.',
+  //     'Portfolio Development: Continuously update your portfolio with professional and personal projects.',
+  //   ],
+  // },
 ];
 
 // Skills ===============================
@@ -144,10 +132,6 @@ export const skillsData = [
   {
     name: 'Photoshop',
     icon: '/skills/photoshop.png',
-  },
-  {
-    name: 'Blender',
-    icon: '/skills/blender.png',
   },
   {
     name: 'VS Code',
@@ -170,40 +154,16 @@ export const skillsData = [
     icon: '/skills/tailwind.png',
   },
   {
-    name: 'Vite',
-    icon: '/skills/vite.png',
-  },
-  {
     name: 'ReactJS',
     icon: '/skills/react.png',
   },
   {
-    name: 'TypeScript',
-    icon: '/skills/ts.png',
-  },
-  {
-    name: 'AI',
-    icon: '/skills/ai.png',
-  },
-  {
-    name: 'Framer Motion',
+    name: 'Motion One',
     icon: '/skills/framer.png',
-  },
-  {
-    name: 'ThreeJS',
-    icon: '/skills/threejs.png',
   },
   {
     name: 'NextJS',
     icon: '/skills/nextjs.png',
-  },
-  {
-    name: 'NodeJS',
-    icon: '/skills/nodejs.png',
-  },
-  {
-    name: 'MongoDB',
-    icon: '/skills/mongodb.png',
   },
   {
     name: 'Github',

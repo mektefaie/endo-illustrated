@@ -9,7 +9,7 @@ import Heading from './sub/Heading';
 import { motion, useMotionValue, useScroll, useSpring } from 'motion/react';
 
 const Experience = () => {
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   // ref that wraps the whole timeline section (used for the timeline animation)
   const timelineRef = useRef(null);
@@ -36,7 +36,7 @@ const Experience = () => {
   });
 
   return (
-    <div className="relative py-20">
+    <div className="relative py-20 px-6 md:px-20 lg:px-40 xl:px-60">
       <Heading text={'Experience & Education'} />
 
       <Image
@@ -119,7 +119,8 @@ const Experience = () => {
                   : 'right-full translate-x-1/2 lg:right-1/2'
               }`}
             >
-              {currentYear - experienceData.length + index + 1}
+              {/* {currentYear - experienceData.length + index + 1} */}
+              {data.year}
             </div>
           </motion.div>
         ))}
