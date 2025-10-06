@@ -36,7 +36,7 @@ const Experience = () => {
   });
 
   return (
-    <div className="relative py-20 px-6 md:px-20 lg:px-40 xl:px-60">
+    <div className="relative min-h-screen px-6 md:px-20 lg:px-40 xl:px-60">
       <Heading text={'Experience & Education'} />
 
       <Image
