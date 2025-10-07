@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import Contact from '@/components/Contact';
 import Experience from '@/components/Experience';
 import Hero from '@/components/Hero';
 import PricingPlans from '@/components/PricingPlans';
@@ -16,6 +17,7 @@ export default function Home() {
       <Projects />
       <Reviews />
       <PricingPlans />
+      <Contact />
     </div>
   );
 }
