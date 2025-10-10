@@ -29,7 +29,7 @@ const Skills = () => {
 
   return (
     <div className="min-h-screen py-20 px-6 md:px-20 lg:px-40 xl:px-60 flex flex-col items-center justify-center gap-y-20">
-      <Heading text="Skills" />
+      <Heading text={'Skills'} />
 
       <motion.div
         className="grid grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] gap-x-8 gap-y-10 justify-items-center w-full"
