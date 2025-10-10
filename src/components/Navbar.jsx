@@ -8,7 +8,7 @@ const Navbar = ({ id }) => {
       {/* Logo */}
       <a href="/#home">
         <span className="text-3xl font-semibold text-red-400">E</span>.
-        <span className="block w-min rotate-90 origin-bottom text-[13.5px] font-medium -ml-3 dark:text-white">
+        <span className="block w-min rotate-90 origin-bottom text-[13.5px] font-semibold -ml-3 dark:text-white">
           Illustrated
         </span>
       </a>
@@ -47,7 +47,7 @@ const Navbar = ({ id }) => {
 
       {/* Copyright */}
       <div className="relative flex items-center justify-center text-[13px] text-gray-500 mt-6">
-        <span className="absolute left-1/2 w-max flex items-center -rotate-90 origin-bottom-left tracking-wider">
+        <span className="absolute left-1/2 w-max flex items-center -rotate-90 origin-bottom-left tracking-wider dark:text-gray-200 transition-colors">
           <span className="mr-1 text-lg">©</span>
           2019 - {new Date().getFullYear()}
         </span>

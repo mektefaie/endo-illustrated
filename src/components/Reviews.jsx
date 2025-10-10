@@ -141,7 +141,7 @@ const Reviews = () => {
               // note: we use plain divs here and animate them imperatively via useAnimate
               key={i}
               ref={el => (slides.current[i] = el)}
-              className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-yellow-500 bg-zinc-50 p-14 lg:p-5 min-h-full box-border rounded-xl"
+              className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-yellow-500 bg-zinc-50 p-14 lg:p-5 min-h-full box-border rounded-xl dark:bg-zinc-700 transition-colors"
             >
               <Image
                 src={review.image}
@@ -153,7 +153,7 @@ const Reviews = () => {
               <h1 className="text-2xl md:text-xl text-center tracking-wider text-yellow-600">
                 {review.name}
               </h1>
-              <p className="text-lg md:text-sm text-justify font-extralight tracking-wide text-gray-600 first-letter:pl-2">
+              <p className="text-lg md:text-sm text-justify font-extralight tracking-wide text-gray-600 first-letter:pl-2 dark:text-white transition-colors">
                 {review.comment}
               </p>
               <div className="flex flex-col items-center justify-center gap-y-2">

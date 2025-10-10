@@ -30,12 +30,12 @@ const Project = ({ data, index }) => {
         initial={{ opacity: 0 }}
         whileHover={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-y-2 bg-white/95 p-6 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+        className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-y-2 bg-white/95 p-6 rounded-lg opacity-0 group-hover:opacity-100 duration-500 ease-in-out dark:bg-zinc-700/95 transition-colors"
       >
-        <h2 className="text-lg font-bold tracking-wide text-gray-600 text-center">
+        <h2 className="text-lg font-bold tracking-wide text-gray-600 text-center dark:text-white transition-colors">
           {data.name}
         </h2>
-        <p className="text-justify text-gray-600 first-letter:pl-2 text-sm sm:text-xs">
+        <p className="text-justify text-gray-500 font-extralight  first-letter:pl-2 dark:text-gray-100 transition-colors">
           {data.desc}
         </p>
       </motion.div>

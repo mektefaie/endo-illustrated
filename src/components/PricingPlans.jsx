@@ -21,16 +21,16 @@ const PricingPlans = () => {
               scale: { duration: 0.15 },
             }}
             key={i}
-            className={`sm:w-[270px] flex flex-col gap-y-6 p-6 border border-l-4 rounded-xl text-gray-600 ${
+            className={`sm:w-[270px] flex flex-col gap-y-6 p-6 border border-l-4 rounded-xl text-gray-600 dark:bg-zinc-700 transition-colors ${
               i === 1
                 ? 'w-[370px] xl:w-[320px] bg-white border-red-400'
                 : 'w-[350px] xl:w-[300px] bg-zinc-100  border-yellow-500'
             }`}
           >
-            <h1 className="text-3xl lg:text-lg font-light tracking-wide text-center">
+            <h1 className="text-3xl lg:text-lg font-light tracking-wide text-center dark:text-white transition-colors">
               {plan.title}
             </h1>
-            <span className="text-2xl lg:text-xl text-center">
+            <span className="text-2xl lg:text-xl text-center dark:text-white transition-colors">
               {plan.pricing}
             </span>
             <ul className="flex flex-col gap-y-2">
@@ -43,13 +43,13 @@ const PricingPlans = () => {
                   >
                     {checkIcon}
                   </span>
-                  <span className="text-[15px] font-light tracking-wide">
+                  <span className="text-[15px] font-light tracking-wide dark:text-white transition-colors">
                     {feature}
                   </span>
                 </li>
               ))}
             </ul>
-            <p className="text-sm font-light text-center">
+            <p className="text-sm font-light text-center dark:text-gray-200 transition-colors">
               <span className="font-semibold">Ideal for:</span>{' '}
               {plan.recommended}
             </p>
