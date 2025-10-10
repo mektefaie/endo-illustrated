@@ -436,51 +436,15 @@ import {
 } from '@remixicon/react';
 
 export const navbarData = [
-  {
-    id: 'home',
-    name: 'Home',
-    icon: <RiHome5Line />,
-  },
-  {
-    id: 'about',
-    name: 'About',
-    icon: <RiUserLine />,
-  },
-  {
-    id: 'experience',
-    name: 'MyRoad',
-    icon: <RiHistoryLine />,
-  },
-  {
-    id: 'skills',
-    name: 'Skills',
-    icon: <RiBriefcaseLine />,
-  },
-  {
-    id: 'reviews',
-    name: 'Reviews',
-    icon: <RiUserStarLine />,
-  },
-  {
-    id: 'projects',
-    name: 'Projects',
-    icon: <RiProjectorLine />,
-  },
-  {
-    id: 'pricing',
-    name: 'Pricing',
-    icon: <RiPriceTag3Line />,
-  },
-  {
-    id: 'contact',
-    name: 'Contact',
-    icon: <RiContactsBook2Line />,
-  },
-  {
-    id: 'questions',
-    name: 'Questions',
-    icon: <RiQuestionAnswerLine />,
-  },
+  { id: 'home', name: 'Home', icon: RiHome5Line },
+  { id: 'about', name: 'About', icon: RiUserLine },
+  { id: 'experience', name: 'MyRoad', icon: RiHistoryLine },
+  { id: 'skills', name: 'Skills', icon: RiBriefcaseLine },
+  { id: 'projects', name: 'Projects', icon: RiProjectorLine },
+  { id: 'reviews', name: 'Reviews', icon: RiUserStarLine },
+  { id: 'pricing', name: 'Pricing', icon: RiPriceTag3Line },
+  { id: 'contact', name: 'Contact', icon: RiContactsBook2Line },
+  { id: 'questions', name: 'Questions', icon: RiQuestionAnswerLine },
 ];
 
 // Toggle ===============================

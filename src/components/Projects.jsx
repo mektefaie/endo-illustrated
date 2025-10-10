@@ -66,8 +66,9 @@ const Projects = () => {
 
   return (
     <div
+      id="projects"
       ref={scope}
-      className="min-h-screen py-20 px-6 md:px-20 lg:px-40 xl:px-60"
+      className="min-h-screen  ml-[30px] py-20 px-6 md:px-20 lg:px-40 xl:px-60"
     >
       <Heading text={'Projects'} />
 

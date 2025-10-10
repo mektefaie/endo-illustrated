@@ -6,7 +6,10 @@ import Heading from './sub/Heading';
 
 const Contact = () => {
   return (
-    <div className="min-h-screen py-20 px-6 md:px-20 lg:px-40 xl:px-60">
+    <div
+      id="contact"
+      className="min-h-screen ml-[30px] py-20 px-6 md:px-20 lg:px-40 xl:px-60"
+    >
       <Heading text={'Get in touch'} />
       <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
         <motion.div

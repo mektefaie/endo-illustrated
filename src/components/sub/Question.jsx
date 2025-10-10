@@ -12,7 +12,7 @@ const Question = ({ data, index }) => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: i * 0.4,
+        delay: i * 0.3,
         duration: 0.3,
         ease: 'easeOut',
       },
