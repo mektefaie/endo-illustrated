@@ -30,7 +30,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="min-h-screen  ml-[30px] py-20 px-6 md:px-20 lg:px-40 xl:px-60 flex flex-col items-center justify-center gap-y-20"
+      className="min-h-screen flex flex-col items-center justify-center gap-y-20"
     >
       <Heading text={'Skills'} />
 

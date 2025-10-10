@@ -6,10 +6,7 @@ import Heading from './sub/Heading';
 
 const PricingPlans = () => {
   return (
-    <div
-      id="pricing"
-      className="min-h-screen  ml-[30px] py-20 px-6 md:px-20 lg:px-40 xl:px-60"
-    >
+    <div id="pricing" className="py-20">
       <Heading text={'Pricing Plans'} />
       <div className="h-full flex lg:flex-col items-center justify-between gap-8">
         {pricingPlans.map((plan, i) => (

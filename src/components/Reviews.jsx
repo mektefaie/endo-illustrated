@@ -125,11 +125,7 @@ const Reviews = () => {
   };
 
   return (
-    <div
-      id="reviews"
-      ref={scope}
-      className="min-h-screen  ml-[30px] py-20 px-6 md:px-20 lg:px-40 xl:px-60"
-    >
+    <div id="reviews" ref={scope} className="py-20">
       <Heading text={'Client Reviews'} />
       <div className="flex flex-col items-center justify-center">
         {/* container can still use motion for entry if desired */}

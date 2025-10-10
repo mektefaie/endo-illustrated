@@ -67,7 +67,7 @@ export const aboutData = [
     icon: <RiGroupLine />,
   },
   {
-    title: 'Awards & Recognitions',
+    title: 'Awards',
     amount: 100,
     icon: <RiAwardFill />,
   },

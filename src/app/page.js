@@ -10,6 +10,7 @@ import Projects from '@/components/Projects';
 import Questions from '@/components/Questions';
 import Reviews from '@/components/Reviews';
 import Skills from '@/components/Skills';
+import Toggle from '@/components/sub/Toggle';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
@@ -37,18 +38,20 @@ export default function Home() {
 
   return (
     <>
-      <Navbar id={id} />
-      <div ref={compsRef}>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Reviews />
-        <PricingPlans />
-        <Contact />
-        <Questions />
-      </div>
+      <Toggle>
+        <Navbar id={id} />
+        <div className="w-min" ref={compsRef}>
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Reviews />
+          <PricingPlans />
+          <Contact />
+          <Questions />
+        </div>
+      </Toggle>
     </>
   );
 }

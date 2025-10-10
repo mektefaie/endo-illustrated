@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="min-h-screen  ml-[30px] py-20 px-6 md:px-20 lg:px-40 xl:px-60 flex flex-col items-center justify-center"
+      className="min-h-screen py-20 flex flex-col items-center justify-center"
     >
       <Heading text={'About Me'} />
       <div className="w-full flex items-center justify-between md:justify-center">
