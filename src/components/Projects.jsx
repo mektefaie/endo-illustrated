@@ -69,7 +69,7 @@ const Projects = () => {
       <Heading text={'Projects'} />
 
       {/* Filter buttons */}
-      <div className="flex flex-wrap items-center justify-center gap-4 py-10">
+      <div className="flex flex-wrap items-center justify-center gap-4 py-10 ">
         {projectsButton.map((text, i) => (
           <motion.button
             key={i}
@@ -92,7 +92,7 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="flex flex-wrap items-center justify-center gap-5">
+      <div className="flex flex-wrap items-center justify-center gap-5 ">
         {filteredProjects.map((data, i) => (
           <motion.div
             key={`proj-${i}`}

@@ -45,7 +45,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="min-h-screen ml-[50px] grid place-items-center"
+      className="h-screen grid place-items-center"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
     >
@@ -103,7 +103,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.5 }}
           className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl"
         >
           {heroIcons.map(({ icon, url }, index) => (

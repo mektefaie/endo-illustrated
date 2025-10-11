@@ -53,7 +53,7 @@ const Question = ({ data, index }) => {
           stiffness: show ? 250 : 50,
           opacity: { delay: show ? 0.1 : 0 },
         }}
-        className="overflow-hidden box-border origin-top pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 dark:text-gray-200"
+        className="overflow-hidden box-border origin-top pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 dark:text-gray-200 "
       >
         {data.answer}
       </motion.p>

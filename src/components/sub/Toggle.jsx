@@ -37,7 +37,7 @@ const Toggle = ({ children }) => {
   return (
     <main ref={mainRef}>
       <div className="bg-zinc-50 dark:bg-zinc-800">
-        <div className="max-w-[1200px] xl:w-full mx-auto flex justify-center xl:px-[90px] sm:pl-80 sm:pr-5 overflow-hidden">
+        <div className="max-w-[1200px] xl:w-full mx-auto flex justify-center xl:px-[90px] md:pl-[80px] sm:pl-[80px] sm:pr-5 overflow-hidden">
           <button
             onClick={() => {
               if (!darkTheme) {
@@ -48,7 +48,7 @@ const Toggle = ({ children }) => {
                 reactLocalStorage.set('darkTheme', false);
               }
             }}
-            className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-500"
+            className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-500 z-40"
           >
             <motion.span
               animate={{ scale: darkTheme ? 0 : 1 }}

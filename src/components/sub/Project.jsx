@@ -12,8 +12,8 @@ const Project = ({ data, index }) => {
       transition={{ duration: 1, type: 'spring', stiffness: 100 }}
       className="
         relative group
-        w-[340px] sm:w-[340px] xs:w-[240px]
-        h-[220px] sm:h-[220px] xs:h-[220px]
+        w-[340px] sm:w-[340px] xs:w-[260px]
+        h-[220px] sm:h-[220px] xs:h-[200px]
         overflow-hidden border border-yellow-400 rounded-lg cursor-pointer
       "
     >
