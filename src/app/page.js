@@ -38,6 +38,7 @@ export default function Home() {
 
   return (
     <>
+      {/* <Load /> */}
       <Toggle>
         <Navbar id={id} />
         <div className="w-min" ref={compsRef}>

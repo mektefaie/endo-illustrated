@@ -7,7 +7,8 @@ const Navbar = ({ id }) => {
     <div className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-10 z-10">
       {/* Logo */}
       <a href="/#home">
-        <span className="text-3xl font-semibold text-red-400">E</span>.
+        <span className="text-3xl font-semibold text-red-400">E</span>
+        <span className="text-xl font-semibold text-red-400 ">.</span>
         <span className="block w-min rotate-90 origin-bottom text-[13.5px] font-semibold -ml-3 dark:text-white">
           Illustrated
         </span>
