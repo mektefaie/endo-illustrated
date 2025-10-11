@@ -20,17 +20,17 @@ const Toggle = ({ children }) => {
   };
 
   useEffect(() => {
-    const storedTheme = reactLocalStorage.get('darkTheme');
-    const parsedTheme = storedTheme ? JSON.parse(storedTheme) : null;
+    const darkTheme = reactLocalStorage.get('darkTheme');
+    const darkThemeParsed = darkTheme ? JSON.parse(darkTheme) : null;
 
     const systemTheme =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (storedTheme === null || storedTheme === undefined) {
+    if (darkTheme === null || darkTheme === undefined) {
       systemTheme ? addDarkTheme() : removeDarkTheme();
     } else {
-      parsedTheme ? addDarkTheme() : removeDarkTheme();
+      darkThemeParsed ? addDarkTheme() : removeDarkTheme();
     }
   }, []);
 
@@ -48,8 +48,7 @@ const Toggle = ({ children }) => {
                 reactLocalStorage.set('darkTheme', false);
               }
             }}
-            className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-500 relative"
-            aria-label="Toggle dark mode"
+            className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-500"
           >
             <motion.span
               animate={{ scale: darkTheme ? 0 : 1 }}
@@ -70,5 +69,4 @@ const Toggle = ({ children }) => {
     </main>
   );
 };
-
 export default Toggle;
