@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const handleLinkClick = link => {
     setActive(link);
-    setMenuOpen(false);
+    setTimeout(() => setMenuOpen(false), 300);
   };
 
   return (
@@ -38,7 +38,9 @@ export default function Navbar() {
             width={32}
             height={32}
           />{' '}
-          <span className="text-xl font-bold">Endo Illustrated</span>{' '}
+          <span className="text-xl font-bold tracking-wide">
+            Endo Illustrated
+          </span>{' '}
         </a>
 
         {/* Desktop Navigation */}
@@ -52,14 +54,14 @@ export default function Navbar() {
                 className={`
               relative transition-colors duration-300
               ${active === link ? 'text-(--accent)' : 'text-(--foreground)'}
-              hover:text-(--accent)
+              hover:text-(--accent) tracking-wider font-medium
             `}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
                 {/* Underline */}
                 <span
                   className={`
-                absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-left
+                absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-center
                 ${
                   active === link
                     ? 'scale-x-100 bg-(--accent)'
@@ -117,12 +119,13 @@ export default function Navbar() {
               relative text-lg transition-colors duration-300
               ${active === link ? 'text-(--accent)' : 'text-(--foreground)'}
               hover:text-(--accent)
+              tracking-wider font-medium
             `}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
                 <span
                   className={`
-                absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-left
+                absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-center
                 ${
                   active === link
                     ? 'scale-x-100 bg-(--accent)'

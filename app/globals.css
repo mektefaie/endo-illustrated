@@ -2,8 +2,8 @@
 
 :root {
   /* Colors */
-  --background: rgba(255, 254, 249, 0.9);
-  --foreground: #222222;
+  --background: #fffef9;
+  --foreground: #2a2a2a;
   --accent: #f43f5e; /* Tailwind rose-500 hex */
 
   /* Fonts */
@@ -14,7 +14,7 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgba(34, 34, 34, 0.9);
+    --background: #2a2a2a;
     --foreground: #fffef9;
     --accent: #f43f5e;
   }

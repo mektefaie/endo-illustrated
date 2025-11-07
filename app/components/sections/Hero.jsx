@@ -1,5 +1,5 @@
 const Hero = () => {
-  return <div className="min-h-screen bg-amber-300">Hero</div>;
+  return <div className="min-h-screen ">Hero</div>;
 };
 export default Hero;
 // 'use client';
