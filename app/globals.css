@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+:root {
+  /* Colors */
+  --background: rgba(255, 254, 249, 0.9);
+  --foreground: #222222;
+  --accent: #f43f5e; /* Tailwind rose-500 hex */
+
+  /* Fonts */
+  --font-quicksand: 'Quicksand', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgba(34, 34, 34, 0.9);
+    --foreground: #fffef9;
+    --accent: #f43f5e;
+  }
+}
+
+/* Body default */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-quicksand), system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
