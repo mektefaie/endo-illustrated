@@ -3,7 +3,7 @@ import Footer from './components/layout/Footer.jsx';
 import Navbar from './components/layout/Navbar.jsx';
 import About from './components/sections/About.jsx';
 import Contact from './components/sections/Contact.jsx';
-import Hero from './components/sections/Hero.jsx';
+import Header from './components/sections/Header.jsx';
 import Process from './components/sections/Process.jsx';
 import Projects from './components/sections/Projects.jsx';
 import './globals.css';
@@ -26,11 +26,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistMono.variable} antialiased`}>
+    <html lang="en" className={`${quicksand.variable} ${geistMono.variable}`}>
+      <body className="antialiased">
         <Navbar />
         <main className="relative">
-          <Hero />
+          <Header />
           <About />
           <Projects />
           <Process />

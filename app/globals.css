@@ -1,10 +1,13 @@
 @import 'tailwindcss';
 
+/* ===============================
+   CSS Variables for Colors & Fonts
+   =============================== */
 :root {
-  /* Colors */
-  --background: #fffef9;
-  --foreground: #2a2a2a;
-  --accent: #f43f5e; /* Tailwind rose-500 hex */
+  /* Light mode colors */
+  --background: #fffef9; /* light cream */
+  --foreground: #2f2f2f; /* dark gray for text */
+  --accent: #f43f5e; /* Tailwind rose-500 */
 
   /* Fonts */
   --font-quicksand: 'Quicksand', sans-serif;
@@ -14,16 +17,40 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2a2a2a;
-    --foreground: #fffef9;
-    --accent: #f43f5e;
+    --background: #2f2f2f; /* dark gray */
+    --foreground: #fffef9; /* light text */
+    --accent: #f43f5e; /* same accent */
   }
 }
 
-/* Body default */
+/* ===============================
+   Body Defaults
+   =============================== */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-quicksand), system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   Smooth Scrolling
+   =============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   Utility: Respect Reduced Motion
+   =============================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

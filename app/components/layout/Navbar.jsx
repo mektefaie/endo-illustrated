@@ -2,15 +2,26 @@
 
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from '../../../public/ei-logo.png';
 import Container from '../ui/Container.jsx';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState('hero');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = ['about', 'projects', 'process', 'contact'];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbarHeight = 64; // same as h-16
+      setIsScrolled(window.scrollY > navbarHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleLinkClick = link => {
     setActive(link);
@@ -20,27 +31,30 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className="font-quicksand fixed top-0 left-0 w-full z-50 shadow-sm backdrop-blur-md
-              bg-(--background) text-(--foreground)"
+      className={`font-quicksand fixed top-0 left-0 w-full z-50 transition-all duration-500 backdrop-blur-md shadow-sm ${
+        isScrolled
+          ? 'bg-[var(--background)] bg-opacity-95 text-[var(--foreground)] shadow-sm'
+          : 'bg-transparent text-[var(--foreground)]'
+      }`}
+      style={{ color: 'var(--foreground)' }}
     >
-      {' '}
       <Container className="flex justify-between items-center h-16">
         {/* Brand + Logo */}
         <a
-          href="#hero"
+          href="#header"
           onClick={() => handleLinkClick('hero')}
           className="flex items-center space-x-2 select-none"
         >
-          {' '}
           <Image
             src={Logo}
             alt="Endo Illustrated Logo"
             width={32}
             height={32}
-          />{' '}
-          <span className="text-xl font-bold tracking-wide">
-            Endo Illustrated
-          </span>{' '}
+            priority
+          />
+          <span className="text-xl font-bold tracking-wide  dark:text-[var(--background)]">
+            Ei
+          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -51,23 +65,16 @@ export default function Navbar() {
                 href={`#${link}`}
                 onClick={() => handleLinkClick(link)}
                 aria-current={active === link ? 'page' : undefined}
-                className={`
-              relative transition-colors duration-300
-              ${active === link ? 'text-(--accent)' : 'text-(--foreground)'}
-              hover:text-(--accent) tracking-wider font-medium
-            `}
+                className="relative transition-colors duration-300 tracking-wider font-medium hover:text-[var(--accent)] dark:text-[var(--background)]"
+                style={active === link ? { color: 'var(--accent)' } : {}}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
-                {/* Underline */}
                 <span
-                  className={`
-                absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-center
-                ${
-                  active === link
-                    ? 'scale-x-100 bg-(--accent)'
-                    : 'scale-x-0 bg-(--accent)'
-                }
-              `}
+                  className={`absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-center ${
+                    active === link
+                      ? 'scale-x-100 bg-[var(--accent)]'
+                      : 'scale-x-0 bg-[var(--accent)]'
+                  }`}
                 />
               </a>
             </li>
@@ -82,31 +89,31 @@ export default function Navbar() {
         >
           <Menu
             size={24}
-            className={`absolute transition-all duration-300 ease-in-out
-                    ${
-                      menuOpen
-                        ? 'opacity-0 scale-75 rotate-90'
-                        : 'opacity-100 scale-100 rotate-0'
-                    }
-                    text-(--foreground)`}
+            className={`absolute transition-all duration-300 ease-in-out ${
+              menuOpen
+                ? 'opacity-0 scale-75 rotate-90'
+                : 'opacity-100 scale-100 rotate-0'
+            } text-[var(--foreground)] dark:text-[var(--background)]`}
           />
           <X
             size={24}
-            className={`absolute transition-all duration-300 ease-in-out
-                    ${
-                      menuOpen
-                        ? 'opacity-100 scale-100 rotate-0'
-                        : 'opacity-0 scale-75 -rotate-90'
-                    }
-                    text-(--foreground)`}
+            className={`absolute transition-all duration-300 ease-in-out ${
+              menuOpen
+                ? 'opacity-100 scale-100 rotate-0'
+                : 'opacity-0 scale-75 -rotate-90'
+            } text-[var(--foreground)] dark:text-[var(--background)]`}
           />
         </button>
       </Container>
+
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden
-                ${menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}
-                bg-(--background) border-t border-(--foreground) bg-opacity-95 backdrop-blur-sm`}
+        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          menuOpen
+            ? 'max-h-64 opacity-100 bg-transparent '
+            : 'max-h-0 opacity-0'
+        } border-t bg-[var(--background)] dark:text-[var(--background)] bg-opacity-95 backdrop-blur-md`}
+        // style={{ borderColor: 'var(--background)' }}
       >
         <ul className="flex flex-col items-center space-y-4 py-6">
           {navLinks.map(link => (
@@ -115,23 +122,16 @@ export default function Navbar() {
                 href={`#${link}`}
                 onClick={() => handleLinkClick(link)}
                 aria-current={active === link ? 'page' : undefined}
-                className={`
-              relative text-lg transition-colors duration-300
-              ${active === link ? 'text-(--accent)' : 'text-(--foreground)'}
-              hover:text-(--accent)
-              tracking-wider font-medium
-            `}
+                className="relative text-lg transition-colors duration-300 tracking-wider font-medium hover:text-[var(--accent)]"
+                style={active === link ? { color: 'var(--accent)' } : {}}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
                 <span
-                  className={`
-                absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-center
-                ${
-                  active === link
-                    ? 'scale-x-100 bg-(--accent)'
-                    : 'scale-x-0 bg-(--accent)'
-                }
-              `}
+                  className={`absolute left-0 -bottom-1 h-0.5 w-full transition-transform duration-300 origin-center ${
+                    active === link
+                      ? 'scale-x-100 bg-[var(--accent)]'
+                      : 'scale-x-0 bg-[var(--accent)]'
+                  }`}
                 />
               </a>
             </li>
