@@ -15,8 +15,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbarHeight = 64; // same as h-16
-      setIsScrolled(window.scrollY > navbarHeight);
+      setIsScrolled(window.scrollY > 64); // same as h-16
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -36,10 +35,9 @@ export default function Navbar() {
           ? 'bg-[var(--background)] bg-opacity-95 text-[var(--foreground)] shadow-sm'
           : 'bg-transparent text-[var(--foreground)]'
       }`}
-      style={{ color: 'var(--foreground)' }}
     >
       <Container className="flex justify-between items-center h-16">
-        {/* Brand + Logo */}
+        {/* Logo */}
         <a
           href="#header"
           onClick={() => handleLinkClick('hero')}
@@ -52,20 +50,20 @@ export default function Navbar() {
             height={32}
             priority
           />
-          <span className="text-xl font-bold tracking-wide  dark:text-[var(--background)]">
+          <span className="text-xl font-bold tracking-wide dark:text-[var(--foreground)]">
             Ei
           </span>
         </a>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-6">
+        {/* Desktop Nav */}
+        <ul className="hidden lg:flex space-x-6">
           {navLinks.map(link => (
             <li key={link} className="relative group">
               <a
                 href={`#${link}`}
                 onClick={() => handleLinkClick(link)}
                 aria-current={active === link ? 'page' : undefined}
-                className="relative transition-colors duration-300 tracking-wider font-medium hover:text-[var(--accent)] dark:text-[var(--background)]"
+                className="relative transition-colors duration-300 tracking-wider font-medium hover:text-[var(--accent)] dark:text-[var(--foreground)]"
                 style={active === link ? { color: 'var(--accent)' } : {}}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
@@ -84,7 +82,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden relative w-8 h-8 flex items-center justify-center outline-none"
+          className="lg:hidden relative w-8 h-8 flex items-center justify-center outline-none"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         >
           <Menu
@@ -93,7 +91,7 @@ export default function Navbar() {
               menuOpen
                 ? 'opacity-0 scale-75 rotate-90'
                 : 'opacity-100 scale-100 rotate-0'
-            } text-[var(--foreground)] dark:text-[var(--background)]`}
+            } text-[var(--foreground)] dark:text-[var(--foreground)]`}
           />
           <X
             size={24}
@@ -101,23 +99,29 @@ export default function Navbar() {
               menuOpen
                 ? 'opacity-100 scale-100 rotate-0'
                 : 'opacity-0 scale-75 -rotate-90'
-            } text-[var(--foreground)] dark:text-[var(--background)]`}
+            } text-[var(--foreground)] dark:text-[var(--foreground)]`}
           />
         </button>
       </Container>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          menuOpen
-            ? 'max-h-64 opacity-100 bg-transparent '
-            : 'max-h-0 opacity-0'
-        } border-t bg-[var(--background)] dark:text-[var(--background)] bg-opacity-95 backdrop-blur-md`}
-        // style={{ borderColor: 'var(--background)' }}
+        className={`lg:hidden transition-[max-height,opacity] duration-500 ease-in-out overflow-hidden border-t bg-[var(--background)] dark:text-[var(--foreground)] bg-opacity-95 backdrop-blur-md ${
+          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
       >
         <ul className="flex flex-col items-center space-y-4 py-6">
-          {navLinks.map(link => (
-            <li key={link} className="relative group">
+          {navLinks.map((link, i) => (
+            <li
+              key={link}
+              className={`relative group transform transition-all duration-500 delay-${
+                i * 75
+              } ${
+                menuOpen
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 -translate-y-3'
+              }`}
+            >
               <a
                 href={`#${link}`}
                 onClick={() => handleLinkClick(link)}
